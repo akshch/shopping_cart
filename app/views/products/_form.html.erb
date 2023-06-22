@@ -1,0 +1,8 @@
+<p>
+    <%= f.label :name %><br>
+    <%= f.text_field :name, required: true, autofocus: true, placeholder: "Enter product name" %>
+  </p>
+  <p>
+    <%= f.label :price %><br>
+    <%= f.number_field :price, step: :any, required: true %>
+  </p>
