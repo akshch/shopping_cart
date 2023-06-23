@@ -4,7 +4,7 @@
   <% @products.each do |product| %>
     <div class="col-sm-3" style="padding-bottom: 25px;">
       <div class="card">
-        <img src="..." class="card-img-top" alt="...">
+        <%= image_tag(product_image(product), alt: "#{product.name}", class: "card-img-top") %>
         <div class="card-body">
           <h5 class="card-title"><%= product.name.titleize %></h5>
           <h6 class="card-subtitle mb-2 text-muted">Price: <%= number_to_currency(product.price, unit: 'Rs') %></h6>
