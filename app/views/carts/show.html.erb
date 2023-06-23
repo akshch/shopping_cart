@@ -12,7 +12,7 @@
           <div class="col-md-8">
             <div class="card-body">
               <h5 class="card-title"><%= line_item.product.name.titleize %></h5>
-              <h6 class="card-subtitle mb-2 text-muted"> Price: <%= number_to_currency(line_item.product.price,  unit: "Rs") %> </h6>
+              <h6 class="card-subtitle mb-2 text-muted"> Quantity: <%= line_item.quantity %> / Total Price: <%= number_to_currency(line_item.total_price, unit: 'Rs') %> </h6>
               <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
               <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
               <%= button_to "+", line_item_add_path(id: line_item), method: :post, class: 'card-link btn btn-primary' %>
