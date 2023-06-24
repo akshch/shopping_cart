@@ -1,4 +1,6 @@
 class OrdersController < ApplicationController
+  before_action :authenticate_user!
+  
   def index
     @orders = Order.all
   end
@@ -18,9 +20,9 @@ class OrdersController < ApplicationController
       item.cart_id = nil
     end
     @order.save
-    Cart.destroy(session[:cart_id])
+    Cart.find_by(user_id: current_user.id)
     session[:cart_id] = nil
-    redirect_to root_path
+    redirect_to orders_path
   end
   
   private
