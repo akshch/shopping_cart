@@ -8,7 +8,7 @@
         <div class="card-body">
           <h5 class="card-title"><%= product.name.titleize %></h5>
           <h6 class="card-subtitle mb-2 text-muted">Price: <%= number_to_currency(product.price, unit: 'Rs') %></h6>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <p class="card-text"><%= get_product_description(product) %></p>
           <%= button_to "Add to cart", line_items_path(:product_id => product.id), class: "btn btn-primary" %>
         </div>
       </div>

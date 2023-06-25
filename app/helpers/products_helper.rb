@@ -5,6 +5,6 @@ module ProductsHelper
   end
 
   def get_product_description(product)
-    product.description.presence || 'Some quick example text to build on the card title and make up the bulk of the cards content.'
+    product.description.presence || 'Lorem Ipsum is simply dummy text of the printing and type setting industry.'
   end
 end
