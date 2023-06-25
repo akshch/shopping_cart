@@ -1,0 +1,15 @@
+Product
+description
+image
+
+User
+Name
+email
+password
+is_admin
+
+rails generate devise User
+bin/rails generate model Product image:attachment
+rails g migration add_column_description_to_products
+rails g migration add_reference_user_to_carts
+rails g migration add_reference_user_to_orders
