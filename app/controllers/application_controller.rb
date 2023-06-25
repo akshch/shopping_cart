@@ -29,15 +29,11 @@ class ApplicationController < ActionController::Base
   end
 
     def set_cart
-      if params['controller'] == 'devise/sessions' && params['action'] == 'create' && @current_cart.present?
+      if ['devise/sessions', 'devise/registrations'].include?(params['controller']) && params['action'] == 'create' && @current_cart.present?
          @current_cart.update(user_id: current_user.id)
          session[:cart_id] = nil
       end
     end
-
-    # def after_sign_out_path_for(resource)
-    #   root_url
-    # end
 
     def after_sign_out_path_for(resource)
       root_url
