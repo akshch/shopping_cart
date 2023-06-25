@@ -5,20 +5,16 @@ application up and running.
 
 Things you may want to cover:
 
-* Ruby version
+Ruby version 3.0.1
 
-* System dependencies
+Key dependencies Rails version version 6.1.7.3, Database MySql
 
-* Configuration
+Clone the Project
 
-* Database creation
+git clone: `git@github.com:akshch/shopping_cart.git `
 
-* Database initialization
+Then run `bundle install`
 
-* How to run the test suite
+Then run `rails db:create db:migrate db:seed `
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Then run `rails server`
